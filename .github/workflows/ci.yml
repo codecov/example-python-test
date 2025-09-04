@@ -22,4 +22,4 @@ jobs:
           pip install sentry-prevent-cli
           sentry-prevent-cli -v upload --report-type test-results
         env:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ secrets.PREVENT_TOKEN }}
