@@ -22,4 +22,4 @@ jobs:
           pip install sentry-prevent-cli
           sentry-prevent-cli -v upload --report-type test-results
         env:
-          token: ${{ secrets.PREVENT_TOKEN }}
+          PREVENT_TOKEN: ${{ secrets.PREVENT_TOKEN }}
