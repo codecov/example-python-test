@@ -1,3 +1,5 @@
+import random
+
 from .calculator import Calculator
 
 
@@ -24,6 +26,8 @@ def test_multiply():
     assert Calculator.multiply(-4, 2.0) == -8.0
 
 def test_divide():
+    if random.random() < 0.2:
+        assert True == False
     # assert Calculator.divide(1, 2) == 0.5
     assert Calculator.divide(1.0, 2.0) == 0.5
     assert Calculator.divide(0, 2.0) == 0
