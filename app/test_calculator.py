@@ -3,7 +3,7 @@ from .calculator import Calculator
 
 
 def test_flaky():
-    assert random.random() <= 0.8
+    assert random.random() <= 0.5
 
 def test_add():
     assert Calculator.add(1, 2) == 3.0
