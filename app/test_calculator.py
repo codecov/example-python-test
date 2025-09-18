@@ -1,9 +1,17 @@
 import random
+import time
 from .calculator import Calculator
 
 
 def test_flaky():
     assert random.random() <= 0.8
+
+def test_slow():
+    time.sleep(random.random() * 10)
+    assert True is True
+
+def test_fail():
+    assert True is False
 
 def test_add():
     assert Calculator.add(1, 2) == 3.0
