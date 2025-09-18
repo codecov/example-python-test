@@ -7,7 +7,7 @@ def test_flaky():
     assert random.random() <= 0.8
 
 def test_slow():
-    time.sleep(random.random() * 10)
+    time.sleep(random.random() * 12)
     assert True is True
 
 def test_fail():
