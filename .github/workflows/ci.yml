@@ -18,6 +18,8 @@ jobs:
         run: pytest --cov app --junitxml=junit.xml -o junit_family=legacy
       - name: Upload test results to Codecov
         if: ${{ !cancelled() }}
-        uses: getsentry/prevent-action@v0
+        run: |
+          pip install sentry-prevent-cli
+          sentry-prevent-cli upload --report-type test-results
         env:
           PREVENT_TOKEN: ${{ secrets.PREVENT_TOKEN }}
