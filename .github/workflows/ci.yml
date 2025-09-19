@@ -21,7 +21,7 @@ jobs:
         run: |
           curl -LOs https://github.com/getsentry/prevent-cli/releases/latest/download/sentry-prevent-cli_linux_arm64
 
-          chmod u+x sentry-prevent-cli_linux-arm64
+          chmod u+x ./sentry-prevent-cli_linux-arm64
           ./sentry-prevent-cli_linux_arm64 -v upload --report-type test-results
         env:
           PREVENT_TOKEN: ${{ secrets.PREVENT_TOKEN }}
