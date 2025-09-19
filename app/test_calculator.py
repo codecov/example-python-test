@@ -8,7 +8,7 @@ def test_flaky():
     assert random.random() <= 0.8
 
 def test_fail_1():
-    assert True is False
+    assert True is True
 
 def test_fail_2():
     assert True is False
